@@ -1,0 +1,353 @@
+﻿<!--HTML CODES-->
+<html lang="en">
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Bakery</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400" type="text/css">
+
+    <!--
+    CSS
+    ============================================= -->
+    <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <!--   CSS for 147 Colors   -->
+    <!--<link href="http://www.colorname.xyz/style.css" rel="stylesheet" type="text/css">-->
+    <!--Product Management CSS-->
+    <link href="css/productmanagement.css" rel="stylesheet" type="text/css" />
+    <!--   CSS for template   -->
+    <!--<link href="http://www.colorname.xyz/style.css" rel="stylesheet" type="text/css">-->
+
+
+</head>
+<body>
+    <header id="header" id="home">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+                        <div class="menu-social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+                        <a class="btns">Welcome <span id="currentusr"></span></a>
+                        <a class="btns" href="mailto:support@cakenbake.com" data-toggle="modal" data-target="#signInPopUpWindow">support@cakebake.com</a>
+                        <a class="btns" href="index.html">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="UserMgmt.html">Users</a></li>
+                        <li><a href="Company.html">Companies</a></li>
+                        <li><a href="productmanagement.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav><!-- #nav-menu-container -->
+            </div>
+        </div>
+    </header><!-- #header -->
+    <!-- start banner Area -->
+    <section class="banner-area relative about-banner" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Cake n Bake
+                    </h1>
+                    <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="productmanagement.html"> Products</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+    <!--Product Table-->
+    <div id="wrap">
+        <h1 style="color:black"><b>Product Management</b></h1>
+
+    </div>
+
+    <div class="container-fluid inner">
+        <br />
+
+        <table id="addproductbutton" class="tableizer-table">
+            <!--TABLE HEADER-->
+
+            <button type="button" id="addproduct" data-toggle="modal" data-target="#addProducts">ADD NEW PRODUCT</button>
+            <!-- Add Modal -->
+            <div class="modal fade" id="addProducts" tabindex="-1" role="dialog" aria-labelledby="addProductLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addtitle">Add Product</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pnamee"><span>Product Name</span></label>
+                                        <input type="text" class="form-control" onfocus="toggleValidation()" placeholder="Enter Product Name" id="pname" required>
+
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="psupplier">Supplier</label>
+
+                                        <select id="psupplier" class="form-control">
+                                            <option selected>Choose Supplier...</option>
+                                            <option value="Cake n Bake">Cake n Bake</option>
+                                            <option value="Three Brothers Bakery">Three Brothers Bakery</option>
+                                            <option value="Kroger Bakery">Kroger Bakery</option>
+                                            <option value="Macrina Bakery">Macrina Bakery</option>
+                                            <option value="Pearl Bakery">Pearl Bakery</option>
+                                            <option value="Arandas Bakery">Arandas Bakery</option>
+
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pdescrpt">Description</label>
+                                        <textarea class="form-control" onfocus="toggleValidation()" id="pdescrpt"></textarea>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pprice">Price</label>
+                                        <input type="number" class="form-control" onfocus="toggleValidation()" id="pprice">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="pinvt">Inventory</label>
+                                        <input type="number" class="form-control" onfocus="toggleValidation()" id="pinvt">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-3 alert alert-danger" id="validationErrorAdd">
+                                    </div>
+                                    <div id="addError" class="error alert alert-dandger"></div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="editstyle" onclick="addnewproduct()">Add</button>
+                            <button type="button" class="deletestyle" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--SEARCH AND CART-->
+
+            <span class="wrap">
+                <div class="search">
+                    <input id="searchbar" type="text" class="searchTerm" />
+                    <button id="searchbutton" type="button" class="searchButton" onclick="searchkey()">
+                        <i class="fa fa-search"></i>
+                    </button>
+
+
+                    <a href="shoppingcart.html">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart" id="cart">
+                            Cart
+                            (<span id="cartTotal" class="totalCount">0</span>)
+
+                        </button>
+                    </a>
+                    <!--<a href="shoppingcart.html"><img src="img/shopping_cart.png" id="cart" /></a>-->
+                </div>
+            </span>
+
+
+        </table>
+    </div>
+    <br />
+    <div class="container-fluid inner" id="pdiv"></div>
+
+    <!-- Edit modal-->
+    <div class="modal fade" id="editProducts" tabindex="-1" role="dialog" aria-labelledby="editProductLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edittitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="editpnamee"><span>Product Name</span></label>
+                                <input type="text" class="form-control" onfocus="toggleValidation()" id="editpname" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="editpsupplier">Supplier</label>
+                                <select id="editpsupplier" class="form-control">
+                                    <option value="Cake n Bake">Cake n Bake</option>
+                                    <option value="Three Brothers Bakery">Three Brothers Bakery</option>
+                                    <option value="Kroger Bakery">Kroger Bakery</option>
+                                    <option value="Macrina Bakery">Macrina Bakery</option>
+                                    <option value="Pearl Bakery">Pearl Bakery</option>
+                                    <option value="Arandas Bakery">Arandas Bakery</option>
+                                    <option value="Supplier Bakery">Supplier Bakery</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="editpdescrpt">Description</label>
+                                <textarea class="form-control" onfocus="toggleValidation()" id="editpdescrpt"></textarea>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="editpprice">Price</label>
+                                <input type="number" class="form-control" onfocus="toggleValidation()" id="editpprice">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="editpinvt">Inventory</label>
+                                <input type="number" class="form-control" onfocus="toggleValidation()" id="editpinvt">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3 alert alert-danger" id="validationErrorEdit">
+                            </div>
+                            <div id="editError" class="error alert alert-dandger"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button id="edititem" type="button" class="editstyle" onclick="edititem()">Update</button>
+                    <button type="button" class="deletestyle" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Edit modal-->
+    <!-- End Product Management!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <!-- Footer Area-->
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>About Us</h6>
+                        <p>
+                            If you own an Iphone, you�ve probably already worked out how much fun it is to use it to watch movies-it has that.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-5  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Newsletter</h6>
+                        <p>Stay update with our latest</p>
+                        <div class="" id="mc_embed_signup">
+                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+                                <input class="form-control" name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required="" type="email">
+                                <button class="click-btn"><i class="lnr lnr-arrow-right" aria-hidden="true"></i></button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                                </div>
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+                    <div class="single-footer-widget">
+                        <h6>Follow Us</h6>
+                        <p>Let us be social</p>
+                        <div class="footer-social d-flex align-items-center">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-behance"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p class="footer-text">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--<script src="js/userRole.js"></script>-->
+    <script src="js/SigninJS.js"></script>
+    <script src="js/productmgmt.js"></script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
